@@ -1,10 +1,19 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
     const router=useNavigate()
+
+    const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div className='flex flex-col lg:flex-row'>
+    <div className='flex flex-col h-fit lg:flex-row'>
         <div className='lg:w-[50%] p-2 lg:p-5 lg:order-2'>
             <div className='h-fit lg:h-[600px] border-2 border-pink-600 rounded-xl p-2 md:p-4 flex flex-col justify-between'>
                 <div>
@@ -21,10 +30,10 @@ const Home = () => {
             </div>
         </div>
         <div className='lg:w-[50%] p-2 lg:p-5 lg:order-1' >
-        <div className=' h-[350px] lg:h-[600px] border-2 bg-pink-600 rounded-xl p-2 md:p-4 flex flex-col justify-between'>
-            <img src={"/homeImage2.jpg"} className='h-full w-100 rounded-lg' alt=''/>
-            <p className='text-center text-white text-xl mt-5'>Continue shopping....</p>
-        </div>
+            <div className=' h-[350px] lg:h-[600px] border-2 bg-pink-600 rounded-xl p-2 md:p-4 flex flex-col justify-between'>
+                <img src={"/homeImage2.jpg"} className='h-full w-100 rounded-lg' alt=''/>
+                <p className='text-center text-white text-xl mt-5'>Continue shopping....</p>
+            </div>
         </div>
     </div>
   )

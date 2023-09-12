@@ -7,7 +7,7 @@ const Cart = () => {
     const {cart}=useSelector((state)=>state.cart)
     const router=useNavigate()
   return (
-    <div className='p-2 lg:p-5 lg:h-[100vh]'>
+    <div className='md:p-2 lg:p-5 lg:h-[100vh]'>
         <div className='flex'>
             <div className='w-[50%] h-full hidden lg:block'>
                 <div className='bg-pink-600 lg:h-[100vh] w-full flex flex-col justify-center items-center '>
@@ -15,7 +15,7 @@ const Cart = () => {
                     <img src={"/cart3.png"} className='h-200 w-200' alt=''/>
                 </div>
             </div>
-            <div className='w-ful lg:w-[50%] p-2'>
+            <div className='w-ful lg:w-[50%]'>
                 {cart.length>0?(<CartList cart={cart}/>):
                 (<div className='flex flex-col items-center'>
                     <div className='flex justify-center'>

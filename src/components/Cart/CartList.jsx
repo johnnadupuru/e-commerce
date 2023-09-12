@@ -14,9 +14,9 @@ const CartList = ({cart}) => {
     const grandTotal=total+taxPrice
 
   return (
-    <div className='p-2 overflow-auto'>
-        {cart.map(product=><div key={product.id} className='mt-2'>
-        <div className='flex w-full h-[150px] lg:h-[200px]'>
+    <div className='md:p-2 overflow-auto'>
+        {cart.map(product=><div key={product.id} className='h-fit mt-2'>
+        <div className='flex w-full h-fit lg:h-[200px]'>
             <div className='w-[20%]'>
                 <img src={product.image} className='h-full w-full' alt=''/>
             </div>
@@ -30,7 +30,7 @@ const CartList = ({cart}) => {
                     <button className='border-[2px] text-xl ml-2 border-black rounded-lg pl-3 pr-3 pb-1' onClick={()=>dispatch(increaseCount(product.id))}>+</button>
                 </div>
             </div>
-            <div className='w-[20%] flex flex-col justify-around p-2 items-end'>
+            <div className='w-[20%] flex flex-col justify-around ml-2 items-end'>
                 <div>
                     <button className='text-4xl text-pink-600' onClick={()=>dispatch(deleteCart(product.id))}><RiDeleteBin6Fill/></button>
                 </div>
