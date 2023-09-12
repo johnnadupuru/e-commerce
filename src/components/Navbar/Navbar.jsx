@@ -29,7 +29,7 @@ const Navbar = () => {
                         <AiOutlineMenu className='group-hover:hidden'/>
                     </button>
                 </div>
-                <div className='absolute rounded-b-lg flex flex-col group-hover:left-[-60px] left-[200px] h-[200px] w-[500px] duration-1000 bg-pink-600'>
+                <div className='absolute hidden rounded-b-lg group-hover:flex flex-col group-hover:left-[-60px] left-[200px] h-[200px] w-[500px] duration-1000 bg-pink-600'>
                     <NavLink
                         to="/"
                         className="text-white text-xl font-semibold aria-[current=page]:text-blue-400 mt-3 aria-[current=page]:font-bold hover:text-blue-400 px-4 py-2"

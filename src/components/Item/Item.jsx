@@ -22,7 +22,7 @@ const Item = () => {
 
   return (
     <div className='p-2 lg:pt-10 lg:p-4 flex justify-center'>
-        {product&&<div className=''>
+        {product&&<div className='lg:block hidden'>
             <button className='bg-pink-600 flex text-center mt-5 rounded-lg text-white font-semibold text-xl p-2 hover:scale-110' onClick={()=>router("/products")}>Back</button>
         </div>}
         {product&&<div className='w-[90%] lg:w-[70%] flex flex-col lg:flex-row'>
