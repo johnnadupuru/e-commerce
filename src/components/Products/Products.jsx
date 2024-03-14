@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addProducts } from '../Redux/productsSlice'
 import ProductList from './ProductList'
-
+const url="https://fakestoreapi.com";
 const Products = () => {
     const [loader, setLoader]=useState(false)
     const [input,setInput]=useState("")
@@ -19,7 +19,8 @@ const Products = () => {
 
     const fetchProducts=async()=>{
         try {
-            const response=await axios.get('https://fakestoreapi.com/products')
+            const response=await axios.get(`${url}/products`)
+            console.log(response)
             const data=await response.data
             dispatch(addProducts(data))
             setLoader(false)

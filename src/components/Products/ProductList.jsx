@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom'
 const ProductList = ({product}) => {
     const router=useNavigate()
   return (
-    <div className='flex flex-col justify-around bg-white h-[430px] w-[270px] mr-2 ml-2 mb-2 mt-2 p-2 shadow-2xl border-2 border-pink-600 rounded-lg overflow-auto' onClick={()=>router(`/item/${product.id}`)}>
+    <div className='flex flex-col justify-around bg-white h-[430px] w-[270px] m-2 p-2 shadow-2xl border-2 border-pink-600 rounded-lg overflow-auto' onClick={()=>router(`/item/${product.id}`)}>
         <div className='h-[60%]'>
-            <img src={product.image} className='w-full h-full rounded-lg' alt=''/>
+            <img src={product.image} className='w-full h-full rounded-lg' alt='image'/>
         </div>
         <div >
             <p className='text-sm text-gray-700 font-semibold mt-2'>{product.title}</p>
