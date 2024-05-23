@@ -25,6 +25,9 @@ const Item = () => {
         {product&&<div className='lg:block hidden'>
             <button className='bg-pink-600 flex text-center mt-5 rounded-lg text-white font-semibold text-xl p-2 hover:scale-110' onClick={()=>router("/products")}>Back</button>
         </div>}
+        {product&&<div className='lg:hidden'>
+            <button className='bg-pink-600 flex text-center mt-5 rounded-lg text-white font-semibold text-sm p-1 hover:scale-110' onClick={()=>router("/products")}>Back</button>
+        </div>}
         {product&&<div className='w-[90%] lg:w-[70%] flex flex-col lg:flex-row'>
             <div className='lg:w-[50%] lg:h-[800px]'>
                 <div className=''>
