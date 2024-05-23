@@ -1,4 +1,4 @@
-import { useState,lazy,Suspense } from 'react'
+import { lazy,Suspense } from 'react'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 const Home=lazy(()=>import('./components/Home/Home'))
@@ -9,7 +9,6 @@ const Item=lazy(()=>import("./components/Item/Item"))
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
